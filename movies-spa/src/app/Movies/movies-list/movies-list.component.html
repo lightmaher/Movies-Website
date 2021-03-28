@@ -1,0 +1,17 @@
+<div *ngIf="movies?.length === 0"> theres no movies now </div>
+<div class="movies-container">
+    <ng-container *ngFor="let movie of movies ; let index = index">
+        <div  class="movie-countainer">
+    <a > <img [src]="movie.nos" alt="poster"> </a>
+    <p> {{movie.title}}</p>
+    <div>
+     <a mat-flat-button color="primary"> Edit </a>
+     <button mat-flat-button color='warn' type="button">
+         Delete
+     </button>
+    </div>
+    </div>
+        
+    </ng-container>
+</div>
+
